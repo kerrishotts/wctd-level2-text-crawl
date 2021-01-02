@@ -5,16 +5,13 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --out-dir public"
   },
+  "browsers": ["defaults"],
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "7.2.0",
     "parcel-bundler": "^1.6.1"
   },
-  "keywords": [
-    "vanilla",
-    "wctd",
-    "star wars"
-  ]
+  "keywords": ["vanilla", "wctd", "star wars"]
 }
