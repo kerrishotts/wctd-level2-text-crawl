@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Crawl</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>Text Crawl</h1>
+      <div class="panels">
+        <div class="input panel">
+          <label>
+            Film:
+            <select id="film">
+              <option value="0">Select a film...</option>
+            </select>
+          </label>
+          <label
+            >Text:
+            <textarea id="text"></textarea>
+          </label>
+        </div>
+        <div class="output panel">
+          <div class="scroller">
+            <div id="scrollText" class="animate"></div>
+          </div>
+          <div class="fog"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>

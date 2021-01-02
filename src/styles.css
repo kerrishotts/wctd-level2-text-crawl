@@ -1,0 +1,140 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: #333;
+  color: #fc4;
+}
+
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #000;
+  color: #fff;
+  border: 1px solid #fc4;
+}
+
+textarea {
+  font-family: Menlo, "Courier New", Courier, monospace;
+}
+
+label {
+  display: inline-flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 500px;
+  overflow: scroll;
+}
+
+h1 {
+  padding: 12px;
+  margin: 0;
+  letter-spacing: 3px;
+  font-style: italic;
+  color: #4cf;
+}
+
+.panels {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+}
+
+.panel {
+  flex: 1 1 auto;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.input.panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.input.panel label {
+  flex: 1 1 auto;
+}
+
+.input.panel label:first-child {
+  flex: 0 0 auto;
+}
+.input.panel label:last-child {
+  margin: 0;
+}
+.output.panel {
+  position: relative;
+  background-color: black;
+  padding: 0;
+}
+
+#text {
+  flex: 1 1 auto;
+}
+
+.scroller {
+  position: relative;
+  color: #fc4;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24pt;
+  perspective: 400px;
+  perspective-origin: 50% 300px;
+  overflow: hidden;
+  width: 100%;
+  text-align: justify;
+  letter-spacing: 3px;
+}
+
+.center {
+  text-align: center;
+}
+
+#scrollText {
+  margin: 0 auto;
+  backface-visibility: visible;
+  width: 500px;
+  height: 2000px;
+}
+
+.animate {
+  animation: 30s scroll infinite linear;
+}
+
+.fog {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  content: "hi";
+  background-color: blue;
+  background: linear-gradient(
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 0) 66%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: rotateX(70deg) translateZ(650px) translateY(50%);
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotateX(70deg) translateZ(650px) translateY(-25%);
+  }
+}
