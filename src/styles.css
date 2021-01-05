@@ -6,11 +6,18 @@ body {
 }
 
 select,
+input,
 textarea {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #000;
   color: #fff;
   border: 1px solid #fc4;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  border-color: #fff;
 }
 
 textarea {
@@ -23,6 +30,20 @@ label {
   font-weight: bold;
   font-size: 12px;
   margin-bottom: 12px;
+}
+
+label > * {
+  flex: 1 1 auto;
+}
+
+label.error {
+  color: #f4c;
+  font-style: italic;
+}
+
+label.error input,
+label.error textarea {
+  border-color: #f4c;
 }
 
 #app {
@@ -58,16 +79,22 @@ h1 {
   flex-direction: column;
 }
 
-.input.panel label {
-  flex: 1 1 auto;
+.input.panel hr {
+  width: 100%;
+  border: 1px solid #4cf;
+  height: 0px;
+  margin-top: 0;
 }
 
-.input.panel label:first-child {
+.input.panel label {
   flex: 0 0 auto;
 }
+
 .input.panel label:last-child {
+  flex: 1 1 auto;
   margin: 0;
 }
+
 .output.panel {
   position: relative;
   background-color: black;
@@ -91,8 +118,13 @@ h1 {
   letter-spacing: 3px;
 }
 
-.center {
+#episode,
+#title {
   text-align: center;
+}
+
+#title {
+  font-weight: bold;
 }
 
 #scrollText {
@@ -112,7 +144,7 @@ h1 {
   right: 0;
   bottom: 0;
   top: 0;
-  content: "hi";
+  content: "";
   background-color: blue;
   background: linear-gradient(
     rgba(0, 0, 0, 1) 0%,

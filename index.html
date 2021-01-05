@@ -17,14 +17,37 @@
               <option value="0">Select a film...</option>
             </select>
           </label>
-          <label
-            >Text:
-            <textarea id="text"></textarea>
+          <hr />
+          <label>
+            Episode #
+            <input
+              type="text"
+              id="txtEpisode"
+              name="episode"
+              placeholder="I, II, etc."
+            />
+          </label>
+          <label>
+            Title
+            <input
+              type="text"
+              id="txtTitle"
+              name="title"
+              placeholder="A Star Wars Story"
+            />
+          </label>
+          <label>
+            Text:
+            <textarea id="txtCrawl" placeholder="A Star Wars Crawl"></textarea>
           </label>
         </div>
         <div class="output panel">
           <div class="scroller">
-            <div id="scrollText" class="animate"></div>
+            <div id="scrollText" class="animate">
+              <p id="episode"></p>
+              <p id="title"></p>
+              <div id="crawl"></div>
+            </div>
           </div>
           <div class="fog"></div>
         </div>
